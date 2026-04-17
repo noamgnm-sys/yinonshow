@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YinonShow — Le Média</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FBF7F1;
+  --cream2: #F7F0E6;
+  --warm: #F0E8DA;
+  --warm2: #E8DCCA;
+  --warm3: #DFD1BC;
+  --gold: #C9A94F;
+  --gold-soft: #D4B96A;
+  --gold-dark: #A68B38;
+  --gold-glow: rgba(201,169,79,0.12);
+  --brown: #52412A;
+  --brown-mid: #6B5940;
+  --brown-soft: #8A7558;
+  --brown-pale: #A99676;
+  --radius: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-full: 999px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--brown); overflow-x: hidden; }
+
+/* ===== NAV ===== */
+.nav {
+  position: fixed; top: 12px; left: 12px; right: 12px; z-index: 100;
+  background: rgba(251,247,241,0.82); backdrop-filter: blur(24px) saturate(1.4);
+  border: 1px solid rgba(201,169,79,0.12);
+  border-radius: var(--radius-full); padding: 6px 8px;
+  box-shadow: 0 4px 30px rgba(82,65,42,0.04);
+}
+.nav-inner {
+  max-width: 1300px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 20px;
+}
+.nav-logo {
+  font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 800;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--brown);
+  cursor: pointer; text-decoration: none;
+}
+.nav-logo em { font-style: normal; color: var(--gold); }
+.nav-links { display: flex; gap: 6px; list-style: none; }
+.nav-links a {
+  font-size: 13px; font-weight: 600; color: var(--brown-soft);
+  text-decoration: none; cursor: pointer; transition: all 0.3s;
+  padding: 8px 16px; border-radius: var(--radius-full);
+}
+.nav-links a:hover { background: var(--gold-glow); color: var(--gold-dark); }
+.nav-links a.active { background: var(--gold-glow); color: var(--gold-dark); }
+.nav-cta {
+  padding: 10px 24px; background: var(--gold); color: var(--cream);
+  font-size: 13px; font-weight: 700; border: none; cursor: pointer;
+  border-radius: var(--radius-full); transition: all 0.3s;
+  text-decoration: none; letter-spacing: 0.5px;
+}
+.nav-cta:hover { background: var(--gold-dark); transform: scale(1.04); box-shadow: 0 6px 24px rgba(201,169,79,0.25); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.hamburger span { width: 22px; height: 2px; background: var(--brown); border-radius: 2px; }
+
+/* ===== MARQUEE ===== */
+.marquee-wrap {
+  overflow: hidden; white-space: nowrap; padding: 14px 0;
+  border-top: 1px solid rgba(201,169,79,0.1);
+  border-bottom: 1px solid rgba(201,169,79,0.1);
+}
+.marquee-wrap.gold-bg { background: var(--gold); border: none; }
+.marquee-wrap.gold-bg .marquee-text { color: var(--cream); }
+.marquee-wrap.warm-bg { background: var(--warm); }
+.marquee { display: inline-flex; animation: marquee 30s linear infinite; }
+.marquee-fast { animation-duration: 20s; }
+.marquee-reverse { animation-direction: reverse; }
+.marquee-text {
+  font-size: 13px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold-dark); padding: 0 32px;
+}
+.marquee-text .sep { display: inline-block; margin: 0 16px; opacity: 0.35; font-size: 10px; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding-top: 100px; padding-bottom: 40px;
+  background: linear-gradient(170deg, var(--cream) 0%, var(--cream2) 40%, var(--warm) 100%);
+  position: relative;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: 0; left: 5%; right: 5%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,79,0.2), transparent);
+}
+.hero-grid {
+  max-width: 1300px; margin: 0 auto; padding: 40px 32px;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;
+}
+.hero-left { position: relative; }
+.hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; animation: fadeUp 0.8s ease; }
+.hero-pill {
+  font-size: 12px; font-weight: 600; color: var(--gold-dark);
+  background: var(--gold-glow); padding: 8px 18px;
+  border-radius: var(--radius-full); border: 1px solid rgba(201,169,79,0.15);
+}
+.hero-title {
+  font-family: 'Playfair Display', serif; font-size: 68px; font-weight: 700;
+  line-height: 1.1; color: var(--brown); margin-bottom: 20px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-desc {
+  font-size: 17px; color: var(--brown-soft); line-height: 1.85;
+  max-width: 500px; margin-bottom: 32px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.3s both; }
+.btn-gold {
+  padding: 16px 36px; background: var(--gold); color: var(--cream);
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+  border: none; cursor: pointer; border-radius: var(--radius-full);
+  transition: all 0.3s; letter-spacing: 0.5px;
+  box-shadow: 0 4px 20px rgba(201,169,79,0.2);
+}
+.btn-gold:hover { background: var(--gold-dark); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(201,169,79,0.3); }
+.btn-soft {
+  padding: 16px 36px; background: rgba(201,169,79,0.1); color: var(--gold-dark);
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+  border: 1px solid rgba(201,169,79,0.2); cursor: pointer;
+  border-radius: var(--radius-full); transition: all 0.3s;
+}
+.btn-soft:hover { background: rgba(201,169,79,0.18); transform: translateY(-2px); }
+.hero-stats {
+  display: flex; gap: 32px; margin-top: 48px;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+.stat-box {
+  background: rgba(201,169,79,0.08); border: 1px solid rgba(201,169,79,0.12);
+  border-radius: var(--radius); padding: 18px 24px; text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif; font-size: 32px;
+  font-weight: 700; color: var(--gold-dark);
+}
+.stat-label { font-size: 11px; color: var(--brown-pale); margin-top: 4px; font-weight: 500; }
+
+.hero-right { animation: fadeUp 1s ease 0.4s both; }
+.hero-card-stack { position: relative; width: 100%; aspect-ratio: 4/5; }
+.hero-card {
+  position: absolute; border-radius: var(--radius-xl); overflow: hidden;
+  border: 1px solid rgba(201,169,79,0.15);
+  box-shadow: 0 12px 48px rgba(82,65,42,0.06);
+  transition: transform 0.5s ease;
+}
+.hero-card-1 {
+  width: 85%; height: 85%; top: 0; left: 0; z-index: 3;
+  background: linear-gradient(150deg, var(--warm), var(--warm2));
+}
+.hero-card-2 {
+  width: 70%; height: 50%; bottom: 0; right: 0; z-index: 2;
+  background: linear-gradient(150deg, var(--cream2), var(--warm));
+}
+.hero-card-content {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; padding: 24px;
+}
+.hero-card-icon { font-size: 64px; opacity: 0.2; }
+.hero-card-label {
+  font-size: 12px; font-weight: 700; color: var(--gold-dark);
+  letter-spacing: 3px; text-transform: uppercase;
+}
+.float-badge {
+  position: absolute; z-index: 10;
+  background: rgba(251,247,241,0.92); backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,169,79,0.2); border-radius: var(--radius-full);
+  padding: 10px 20px; font-size: 13px; font-weight: 700; color: var(--gold-dark);
+  box-shadow: 0 4px 20px rgba(82,65,42,0.06);
+  animation: floatBadge 4s ease-in-out infinite;
+}
+.float-badge-1 { top: 12%; right: -8%; animation-delay: 0s; }
+.float-badge-2 { bottom: 20%; left: -5%; animation-delay: 2s; }
+@keyframes floatBadge {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ===== SECTIONS ===== */
+.section { max-width: 1300px; margin: 0 auto; padding: 80px 32px; }
+.section-header { margin-bottom: 40px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.section-header-left {}
+.section-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700;
+  color: var(--brown); line-height: 1.2;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+.see-all {
+  font-size: 13px; font-weight: 700; color: var(--gold-dark);
+  text-decoration: none; cursor: pointer;
+  padding: 10px 24px; background: var(--gold-glow);
+  border-radius: var(--radius-full); border: 1px solid rgba(201,169,79,0.15);
+  transition: all 0.3s;
+}
+.see-all:hover { background: rgba(201,169,79,0.18); }
+
+/* ===== ÉPISODES ===== */
+.ep-scroll {
+  display: flex; gap: 20px; overflow-x: auto;
+  scroll-snap-type: x mandatory; padding-bottom: 16px;
+  scrollbar-width: none;
+}
+.ep-scroll::-webkit-scrollbar { display: none; }
+.ep-card {
+  flex-shrink: 0; width: 340px; scroll-snap-align: start;
+  background: var(--cream2); border: 1px solid rgba(201,169,79,0.1);
+  border-radius: var(--radius-lg); overflow: hidden;
+  cursor: pointer; transition: all 0.4s;
+}
+.ep-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(82,65,42,0.08);
+  border-color: rgba(201,169,79,0.25);
+}
+.ep-img {
+  width: 100%; height: 200px; position: relative;
+  background: linear-gradient(135deg, var(--warm), var(--warm2));
+  display: flex; align-items: center; justify-content: center;
+}
+.ep-play {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(251,247,241,0.88); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: var(--gold-dark);
+  box-shadow: 0 4px 16px rgba(82,65,42,0.08);
+  transition: transform 0.3s;
+}
+.ep-card:hover .ep-play { transform: scale(1.15); }
+.ep-badge {
+  position: absolute; top: 14px; left: 14px;
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  color: var(--gold-dark); background: rgba(251,247,241,0.88);
+  padding: 6px 14px; border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+.ep-new-badge {
+  position: absolute; top: 14px; right: 14px;
+  font-size: 9px; font-weight: 800; letter-spacing: 1px;
+  color: var(--cream); background: var(--gold);
+  padding: 5px 14px; border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+.ep-body { padding: 22px 24px; }
+.ep-guest { font-size: 12px; font-weight: 700; color: var(--gold-dark); margin-bottom: 6px; }
+.ep-title {
+  font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700;
+  color: var(--brown); margin-bottom: 8px; line-height: 1.35;
+}
+.ep-desc { font-size: 13px; color: var(--brown-soft); line-height: 1.7; }
+.ep-date { font-size: 11px; color: var(--brown-pale); margin-top: 14px; }
+
+/* ===== INVITÉS ===== */
+.guests-scroll {
+  display: flex; gap: 16px; overflow-x: auto;
+  scroll-snap-type: x mandatory; padding-bottom: 12px;
+  scrollbar-width: none;
+}
+.guests-scroll::-webkit-scrollbar { display: none; }
+.g-card {
+  flex-shrink: 0; width: 200px; scroll-snap-align: start;
+  text-align: center; padding: 28px 18px;
+  background: var(--cream2); border: 1px solid rgba(201,169,79,0.1);
+  border-radius: var(--radius-lg); cursor: pointer;
+  transition: all 0.4s;
+}
+.g-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(82,65,42,0.06);
+  border-color: rgba(201,169,79,0.25);
+}
+.g-avatar {
+  width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 14px;
+  background: linear-gradient(135deg, var(--warm), var(--warm2));
+  border: 3px solid rgba(201,169,79,0.18);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; transition: border-color 0.3s;
+}
+.g-card:hover .g-avatar { border-color: var(--gold); }
+.g-name {
+  font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700;
+  color: var(--brown); margin-bottom: 4px;
+}
+.g-role {
+  font-size: 11px; color: var(--gold-dark); font-weight: 600;
+  letter-spacing: 1px; margin-bottom: 8px;
+}
+.g-ep { font-size: 10px; color: var(--brown-pale); }
+
+/* ===== BLOG ===== */
+.blog-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px;
+}
+.b-card {
+  background: var(--cream2); border: 1px solid rgba(201,169,79,0.1);
+  border-radius: var(--radius-lg); overflow: hidden;
+  cursor: pointer; transition: all 0.4s;
+}
+.b-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(82,65,42,0.06);
+}
+.b-img {
+  width: 100%; height: 180px;
+  background: linear-gradient(135deg, var(--warm), var(--warm2));
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.b-cat {
+  position: absolute; top: 14px; left: 14px;
+  font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  color: var(--cream); background: var(--gold);
+  padding: 5px 14px; border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+.b-icon { font-size: 40px; opacity: 0.15; }
+.b-body { padding: 24px; }
+.b-title {
+  font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700;
+  color: var(--brown); margin-bottom: 10px; line-height: 1.35;
+}
+.b-excerpt { font-size: 13px; color: var(--brown-soft); line-height: 1.8; margin-bottom: 14px; }
+.b-meta { font-size: 11px; color: var(--brown-pale); }
+.b-read {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+  font-size: 13px; font-weight: 700; color: var(--gold-dark);
+  text-decoration: none; transition: gap 0.3s;
+}
+.b-read:hover { gap: 10px; }
+
+/* ===== CONTACT ===== */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-left h3 {
+  font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700;
+  color: var(--brown); margin-bottom: 14px;
+}
+.contact-left p { font-size: 15px; color: var(--brown-soft); line-height: 1.9; margin-bottom: 24px; }
+.socials { display: flex; gap: 10px; margin-bottom: 24px; }
+.soc-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--gold-glow); border: 1px solid rgba(201,169,79,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; cursor: pointer; transition: all 0.3s; text-decoration: none;
+}
+.soc-btn:hover { background: var(--gold); transform: scale(1.1); box-shadow: 0 4px 16px rgba(201,169,79,0.2); }
+.c-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.c-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-soft); }
+.c-text { font-size: 14px; color: var(--brown-mid); }
+
+.form-card {
+  background: var(--cream2); border: 1px solid rgba(201,169,79,0.12);
+  border-radius: var(--radius-xl); padding: 36px; 
+}
+.form-card .form-row { display: flex; gap: 14px; margin-bottom: 14px; }
+.form-card .form-row > * { flex: 1; }
+.form-card input, .form-card textarea, .form-card select {
+  width: 100%; padding: 14px 20px;
+  border: 1px solid rgba(201,169,79,0.18); border-radius: var(--radius);
+  background: var(--cream); font-family: 'DM Sans', sans-serif;
+  font-size: 14px; color: var(--brown); outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 14px;
+}
+.form-card input:focus, .form-card textarea:focus {
+  border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,169,79,0.08);
+}
+.form-card textarea { min-height: 120px; resize: vertical; }
+.form-card select { appearance: none; cursor: pointer; }
+.form-submit {
+  padding: 16px 40px; background: var(--gold); border: none;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
+  color: var(--cream); cursor: pointer; border-radius: var(--radius-full);
+  transition: all 0.3s; box-shadow: 0 4px 16px rgba(201,169,79,0.2);
+}
+.form-submit:hover { background: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,169,79,0.3); }
+
+/* ===== CTA BAND ===== */
+.cta-band {
+  margin: 0 32px; padding: 56px 48px; text-align: center;
+  background: linear-gradient(135deg, var(--warm), var(--warm2));
+  border-radius: var(--radius-xl); border: 1px solid rgba(201,169,79,0.12);
+  position: relative; overflow: hidden;
+}
+.cta-band::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(201,169,79,0.08) 0%, transparent 60%);
+}
+.cta-band-title {
+  font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700;
+  color: var(--brown); margin-bottom: 12px; position: relative;
+}
+.cta-band-desc { font-size: 15px; color: var(--brown-soft); margin-bottom: 28px; position: relative; }
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 60px; padding: 48px 32px 24px; text-align: center;
+  background: var(--warm); border-top: 1px solid rgba(201,169,79,0.1);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+.footer-logo {
+  font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 800;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--brown); margin-bottom: 6px;
+}
+.footer-logo em { font-style: normal; color: var(--gold); }
+.footer-tagline {
+  font-family: 'Playfair Display', serif; font-size: 15px; font-style: italic;
+  color: var(--gold-dark); margin-bottom: 20px;
+}
+.footer-links { display: flex; gap: 20px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 13px; font-weight: 600; color: var(--brown-soft);
+  text-decoration: none; cursor: pointer; transition: color 0.2s;
+  padding: 6px 14px; border-radius: var(--radius-full);
+}
+.footer-links a:hover { color: var(--gold-dark); background: var(--gold-glow); }
+.footer-copy { font-size: 11px; color: var(--brown-pale); margin-top: 16px; }
+
+/* ===== REVEAL ===== */
+.reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== PAGE SYSTEM ===== */
+.page { display: none; min-height: 100vh; padding-top: 80px; }
+.page.active { display: block; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 42px; }
+  .hero-right { display: none; }
+  .hero-stats { gap: 12px; }
+  .stat-box { padding: 14px 16px; }
+  .stat-num { font-size: 24px; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-card .form-row { flex-direction: column; }
+  .section-title { font-size: 30px; }
+  .section-header { flex-direction: column; align-items: flex-start; }
+  .cta-band { margin: 0 16px; padding: 40px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="showPage('accueil')">Yinon<em>Show</em></a>
+    <ul class="nav-links" id="navLinks">
+      <a onclick="showPage('accueil')" class="active" data-page="accueil">Accueil</a>
+      <a onclick="showPage('episodes')" data-page="episodes">Épisodes</a>
+      <a onclick="showPage('invites')" data-page="invites">Invités</a>
+      <a onclick="showPage('blog')" data-page="blog">Blog</a>
+      <a onclick="showPage('contact')" data-page="contact">Contact</a>
+    </ul>
+    <a class="nav-cta" onclick="showPage('contact')">Proposer un invité</a>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ACCUEIL -->
+<div class="page active" id="page-accueil">
+  <div class="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-pills">
+          <span class="hero-pill">🎙 Podcast</span>
+          <span class="hero-pill">🔥 Sans filtre</span>
+          <span class="hero-pill">❤️ Bienveillance</span>
+        </div>
+        <h1 class="hero-title">Révéler les <em>âmes</em> derrière les histoires</h1>
+        <p class="hero-desc">Le média qui rassemble. Des conversations authentiques avec bienveillance. Fondé par Jino Wilson.</p>
+        <div class="hero-btns">
+          <button class="btn-gold" onclick="showPage('episodes')">Voir les épisodes →</button>
+          <button class="btn-soft" onclick="showPage('contact')">Devenir invité</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box"><div class="stat-num">30+</div><div class="stat-label">Épisodes</div></div>
+          <div class="stat-box"><div class="stat-num">3K+</div><div class="stat-label">Communauté</div></div>
+          <div class="stat-box"><div class="stat-num">∞</div><div class="stat-label">Bienveillance</div></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card-stack">
+          <div class="hero-card hero-card-1">
+            <div class="hero-card-content"><span class="hero-card-icon">🎙</span><span class="hero-card-label">Dernier épisode</span></div>
+          </div>
+          <div class="hero-card hero-card-2">
+            <div class="hero-card-content"><span class="hero-card-icon">⭐</span><span class="hero-card-label">Invités</span></div>
+          </div>
+          <div class="float-badge float-badge-1">🔥 Sans filtre</div>
+          <div class="float-badge float-badge-2">🕊️ Unir les âmes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee-wrap gold-bg">
+    <div class="marquee marquee-fast">
+      <span class="marquee-text">AUTHENTICITÉ <span class="sep">✦</span> BIENVEILLANCE <span class="sep">✦</span> HUMOUR <span class="sep">✦</span> UNIR LES ÂMES <span class="sep">✦</span> YINONSHOW <span class="sep">✦</span> AUTHENTICITÉ <span class="sep">✦</span> BIENVEILLANCE <span class="sep">✦</span> HUMOUR <span class="sep">✦</span> UNIR LES ÂMES <span class="sep">✦</span> YINONSHOW <span class="sep">✦</span></span>
+      <span class="marquee-text">AUTHENTICITÉ <span class="sep">✦</span> BIENVEILLANCE <span class="sep">✦</span> HUMOUR <span class="sep">✦</span> UNIR LES ÂMES <span class="sep">✦</span> YINONSHOW <span class="sep">✦</span> AUTHENTICITÉ <span class="sep">✦</span> BIENVEILLANCE <span class="sep">✦</span> HUMOUR <span class="sep">✦</span> UNIR LES ÂMES <span class="sep">✦</span> YINONSHOW <span class="sep">✦</span></span>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="section-header"><div class="section-header-left"><p class="section-tag">Derniers épisodes</p><h2 class="section-title">À ne pas <em>manquer</em></h2></div><a class="see-all" onclick="showPage('episodes')">Tout voir →</a></div>
+    <div class="ep-scroll">
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #30</span><span class="ep-new-badge">Nouveau</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Nom de l'invité</p><h3 class="ep-title">Il a tout quitté pour suivre sa foi</h3><p class="ep-desc">Une conversation profonde sur le courage de ses convictions...</p><p class="ep-date">15 Mars 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #29</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Nom de l'invité</p><h3 class="ep-title">L'humour juif sans filtre</h3><p class="ep-desc">Quand le rire devient un pont entre les cultures...</p><p class="ep-date">8 Mars 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #28</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Nom de l'invité</p><h3 class="ep-title">Unir les cœurs au-delà des différences</h3><p class="ep-desc">Son engagement pour rassembler les communautés...</p><p class="ep-date">1 Mars 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #27</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Nom de l'invité</p><h3 class="ep-title">Mon parcours de vie</h3><p class="ep-desc">Un témoignage inspirant et plein d'humanité...</p><p class="ep-date">22 Fév 2026</p></div></div>
+    </div>
+  </div>
+
+  <div class="marquee-wrap warm-bg">
+    <div class="marquee marquee-reverse">
+      <span class="marquee-text">NOUVEL ÉPISODE CHAQUE SEMAINE <span class="sep">✦</span> @YINONSHOW <span class="sep">✦</span> @YINONOFFICIAL <span class="sep">✦</span> YOUTUBE <span class="sep">✦</span> REJOINS LA FAMILLE <span class="sep">✦</span> NOUVEL ÉPISODE CHAQUE SEMAINE <span class="sep">✦</span> @YINONSHOW <span class="sep">✦</span> @YINONOFFICIAL <span class="sep">✦</span> YOUTUBE <span class="sep">✦</span> REJOINS LA FAMILLE <span class="sep">✦</span></span>
+      <span class="marquee-text">NOUVEL ÉPISODE CHAQUE SEMAINE <span class="sep">✦</span> @YINONSHOW <span class="sep">✦</span> @YINONOFFICIAL <span class="sep">✦</span> YOUTUBE <span class="sep">✦</span> REJOINS LA FAMILLE <span class="sep">✦</span> NOUVEL ÉPISODE CHAQUE SEMAINE <span class="sep">✦</span> @YINONSHOW <span class="sep">✦</span> @YINONOFFICIAL <span class="sep">✦</span> YOUTUBE <span class="sep">✦</span> REJOINS LA FAMILLE <span class="sep">✦</span></span>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="section-header"><div class="section-header-left"><p class="section-tag">Invités</p><h2 class="section-title">Les <em>âmes</em> du show</h2></div><a class="see-all" onclick="showPage('invites')">Tout voir →</a></div>
+    <div class="guests-scroll">
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 1</h3><p class="g-role">Entrepreneur</p><p class="g-ep">Ép. #30</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 2</h3><p class="g-role">Artiste</p><p class="g-ep">Ép. #28</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 3</h3><p class="g-role">Humoriste</p><p class="g-ep">Ép. #25</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 4</h3><p class="g-role">Auteur</p><p class="g-ep">Ép. #22</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 5</h3><p class="g-role">Rabbin</p><p class="g-ep">Ép. #18</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 6</h3><p class="g-role">Musicien</p><p class="g-ep">Ép. #12</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 7</h3><p class="g-role">Activiste</p><p class="g-ep">Ép. #08</p></div>
+    </div>
+  </div>
+
+  <div class="cta-band reveal">
+    <h2 class="cta-band-title">Tu as une histoire à raconter ?</h2>
+    <p class="cta-band-desc">Le YinonShow accueille des âmes authentiques. Propose-toi ou propose quelqu'un.</p>
+    <button class="btn-gold" onclick="showPage('contact')">Devenir invité →</button>
+  </div>
+</div>
+
+<!-- ÉPISODES -->
+<div class="page" id="page-episodes">
+  <div class="section" style="padding-top:40px"><div class="section-header"><div><p class="section-tag">Tous les épisodes</p><h2 class="section-title">La collection <em>complète</em></h2></div></div>
+    <div class="ep-scroll" style="flex-wrap:wrap">
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #30</span><span class="ep-new-badge">Nouveau</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Invité</p><h3 class="ep-title">Il a tout quitté pour sa foi</h3><p class="ep-desc">Description...</p><p class="ep-date">15 Mars 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #29</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Invité</p><h3 class="ep-title">L'humour juif sans filtre</h3><p class="ep-desc">Description...</p><p class="ep-date">8 Mars 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #28</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Invité</p><h3 class="ep-title">Unir les cœurs</h3><p class="ep-desc">Description...</p><p class="ep-date">1 Mars 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #27</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Invité</p><h3 class="ep-title">Parcours de vie</h3><p class="ep-desc">Description...</p><p class="ep-date">22 Fév 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #26</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Invité</p><h3 class="ep-title">Foi et modernité</h3><p class="ep-desc">Description...</p><p class="ep-date">15 Fév 2026</p></div></div>
+      <div class="ep-card"><div class="ep-img"><span class="ep-badge">ÉP. #25</span><div class="ep-play">▶</div></div><div class="ep-body"><p class="ep-guest">w/ Invité</p><h3 class="ep-title">Le rire comme arme</h3><p class="ep-desc">Description...</p><p class="ep-date">8 Fév 2026</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- INVITÉS -->
+<div class="page" id="page-invites">
+  <div class="section" style="padding-top:40px"><div class="section-header"><div><p class="section-tag">Galerie</p><h2 class="section-title">Nos <em>invités</em></h2></div></div>
+    <div class="guests-scroll" style="flex-wrap:wrap">
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 1</h3><p class="g-role">Entrepreneur</p><p class="g-ep">Ép. #30</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 2</h3><p class="g-role">Artiste</p><p class="g-ep">Ép. #28</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 3</h3><p class="g-role">Humoriste</p><p class="g-ep">Ép. #25</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 4</h3><p class="g-role">Auteur</p><p class="g-ep">Ép. #22</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 5</h3><p class="g-role">Rabbin</p><p class="g-ep">Ép. #18</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 6</h3><p class="g-role">Musicien</p><p class="g-ep">Ép. #12</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 7</h3><p class="g-role">Activiste</p><p class="g-ep">Ép. #08</p></div>
+      <div class="g-card"><div class="g-avatar">👤</div><h3 class="g-name">Invité 8</h3><p class="g-role">Chef</p><p class="g-ep">Ép. #05</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG -->
+<div class="page" id="page-blog">
+  <div class="section" style="padding-top:40px"><div class="section-header"><div><p class="section-tag">Blog</p><h2 class="section-title">Articles & <em>réflexions</em></h2></div></div>
+    <div class="blog-grid">
+      <div class="b-card"><div class="b-img"><span class="b-cat">Coulisses</span><span class="b-icon">📝</span></div><div class="b-body"><h3 class="b-title">Comment on prépare un épisode</h3><p class="b-excerpt">De la recherche de l'invité à l'enregistrement...</p><p class="b-meta">12 Mars 2026 · 5 min</p><a class="b-read">Lire l'article →</a></div></div>
+      <div class="b-card"><div class="b-img"><span class="b-cat">Réflexion</span><span class="b-icon">💭</span></div><div class="b-body"><h3 class="b-title">La bienveillance dans un monde de clash</h3><p class="b-excerpt">Pourquoi choisir la bienveillance quand tout pousse au conflit...</p><p class="b-meta">5 Mars 2026 · 7 min</p><a class="b-read">Lire l'article →</a></div></div>
+      <div class="b-card"><div class="b-img"><span class="b-cat">Best of</span><span class="b-icon">🔥</span></div><div class="b-body"><h3 class="b-title">Les 5 moments les plus forts</h3><p class="b-excerpt">Retour sur les passages qui ont marqué la communauté...</p><p class="b-meta">28 Fév 2026 · 4 min</p><a class="b-read">Lire l'article →</a></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+  <div class="section" style="padding-top:40px"><div class="section-header"><div><p class="section-tag">Contact</p><h2 class="section-title">Parlons <em>ensemble</em></h2></div></div>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h3>Envie de participer ?</h3>
+        <p>Tu as une histoire à partager, tu connais quelqu'un qui devrait passer sur le YinonShow, ou tu veux simplement nous contacter ? On est là.</p>
+        <div class="socials"><a class="soc-btn">📸</a><a class="soc-btn">▶️</a><a class="soc-btn">🎵</a><a class="soc-btn">🐦</a></div>
+        <div class="c-detail"><div class="c-dot"></div><div class="c-text">@yinonshow · @yinonofficial</div></div>
+        <div class="c-detail"><div class="c-dot"></div><div class="c-text">youtube.com/@yinonofficial</div></div>
+        <div class="c-detail"><div class="c-dot"></div><div class="c-text">contact@yinonshow.com</div></div>
+      </div>
+      <div class="form-card">
+        <div class="form-row"><input placeholder="Nom"><input placeholder="Email"></div>
+        <select><option>Proposer un invité</option><option>Devenir invité</option><option>Partenariat</option><option>Autre</option></select>
+        <textarea placeholder="Raconte-nous ton histoire..."></textarea>
+        <button class="form-submit">Envoyer →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">Yinon<em>Show</em></div>
+  <p class="footer-tagline">Révéler les âmes derrière les histoires</p>
+  <div class="footer-links">
+    <a onclick="showPage('accueil')">Accueil</a><a onclick="showPage('episodes')">Épisodes</a>
+    <a onclick="showPage('invites')">Invités</a><a onclick="showPage('blog')">Blog</a>
+    <a onclick="showPage('contact')">Contact</a>
+  </div>
+  <p class="footer-copy">© 2026 YinonShow — Tous droits réservés</p>
+</footer>
+
+<script>
+function showPage(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.remove('active');if(a.dataset.page===p)a.classList.add('active')});
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(initReveal,100);
+}
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+function initReveal(){
+  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+initReveal();
+</script>
+</body>
+</html>
