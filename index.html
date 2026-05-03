@@ -1722,7 +1722,82 @@ body {
 
 /* Quick contacts - keep as is, already styled for dark */
 
+/* ============ MOBILE OPTIMISATIONS ============ */
+@media (max-width: 768px) {
 
+  /* --- Navbar --- */
+  .nav-cta {
+    padding: 8px 14px !important;
+    gap: 6px;
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  /* --- Hero --- */
+  .hero { padding: 100px 20px 60px !important; }
+  .hero-content { gap: 20px !important; }
+  .hero-title { font-size: clamp(36px, 10vw, 52px) !important; letter-spacing: -1px !important; }
+  .hero-subtitle { font-size: 17px !important; }
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100%;
+  }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 15px 24px !important;
+    font-size: 15px !important;
+  }
+  .hero-stats {
+    gap: 20px !important;
+    margin-top: 24px !important;
+    justify-content: space-around !important;
+    width: 100%;
+  }
+  .stat-num { font-size: 34px !important; }
+  .stat-label { font-size: 10px !important; letter-spacing: 1.5px !important; }
+
+  /* --- Marquee --- */
+  .marquee-item { font-size: 24px !important; padding: 0 20px !important; }
+
+  /* --- Sections padding --- */
+  .section { padding: 64px 20px !important; }
+  .about-section { padding: 64px 20px !important; }
+  #episodes { padding: 64px 20px !important; }
+  .audience-section, #audience { padding: 64px 20px !important; }
+  .guests-section { padding: 64px 20px !important; }
+  #business { padding: 64px 20px !important; }
+  #talents { padding: 64px 20px !important; }
+  .contact-section { padding: 64px 20px !important; }
+  .platforms-section { padding: 64px 20px !important; }
+
+  /* --- Episodes grid --- */
+  .episodes-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* --- About image (limite la hauteur sur mobile) --- */
+  .about-image { aspect-ratio: 3/2 !important; }
+  .about-content { gap: 28px !important; }
+
+  /* --- Contact image wrap --- */
+  .contact-image-wrap { min-height: 280px !important; }
+
+  /* --- Section header --- */
+  .section-header { margin-bottom: 36px !important; }
+  .section-title { font-size: clamp(28px, 8vw, 40px) !important; letter-spacing: -0.5px !important; }
+  .section-subtitle { font-size: 15px !important; }
+
+  /* --- Guests scroll --- */
+  .guest-card { min-width: 200px !important; }
+
+  /* --- Business / Talents cards --- */
+  .demo-card { padding: 24px !important; }
+}
 </style>
 </head>
 <body>
@@ -1753,7 +1828,10 @@ body {
     <a href="#talents" class="nav-link">Talents</a>
     <a href="#contact" class="nav-link">Contact</a>
   </div>
-  <a href="https://www.youtube.com/@yinonofficial" class="nav-cta" target="_blank">YouTube ↗</a>
+  <a href="https://www.youtube.com/@yinonofficial" class="nav-cta" target="_blank">
+    <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0"><path d="M17.6 2.03C17.39.85 16.43.12 15.35.07 13.19 0 11.02 0 9 0S4.81 0 2.65.07C1.57.12.61.85.4 2.03.13 3.48 0 5.13 0 6.5s.13 3.02.4 4.47c.21 1.18 1.17 1.91 2.25 1.96C4.81 13 6.98 13 9 13s4.19 0 6.35-.07c1.08-.05 2.04-.78 2.25-1.96.27-1.45.4-3.1.4-4.47s-.13-3.02-.4-4.47z" fill="#FF0000"/><path d="M7 9.5V3.5l5 3-5 3z" fill="#fff"/></svg>
+    <span style="font-size:13px">YouTube</span>
+  </a>
 </nav>
 <section class="hero" id="hero">
   <div class="hero-bg"></div>
