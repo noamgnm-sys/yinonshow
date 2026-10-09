@@ -1,8 +1,6 @@
-/* ---------- NEWSLETTER POPUP ---------- */
 (function(){
-  var KEY_DAYS = 'ys_nl_until';   /* refus via la croix : 7 jours */
-  var KEY_SESS = 'ys_nl_snoozed'; /* refus via le fond/Echap : cette visite */
-
+  var KEY_DAYS = 'ys_nl_until';
+  var KEY_SESS = 'ys_nl_snoozed';
   var skip = false;
   try {
     var until = parseInt(localStorage.getItem(KEY_DAYS) || '0', 10);
@@ -36,8 +34,7 @@
 
   overlay.addEventListener('click', function(e){
     if (e.target !== overlay) return;
-    if (Date.now() - shownAt < 800) return;   /* garde anti clic accidentel */
-    hide(0);
+    if (Date.now() - shownAt < 800) return;       hide(0);
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape' && overlay.classList.contains('nl-show')) hide(0);
