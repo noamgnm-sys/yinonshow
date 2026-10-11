@@ -391,3 +391,13 @@ textarea.inp{resize:vertical;min-height:130px}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
 .rv.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.mq-tr{animation:none}}
+
+/* ---------- Correctifs mobile ---------- */
+.frm-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.frm .inp{min-width:0;width:100%}
+@media(max-width:560px){.frm-row{grid-template-columns:1fr}}
+@media(max-width:900px){
+  .hd:not(.on){background:#fff;backdrop-filter:none}
+  .hero{padding-top:78px}
+  .hero-media img{object-position:center 18%}
+}
