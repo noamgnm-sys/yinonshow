@@ -1,4 +1,4 @@
-const __IMG__ = {"img-02": "assets/img/episodes/img-02.webp", "img-03": "assets/img/episodes/img-03.webp", "img-04": "assets/img/episodes/img-04.webp", "img-05": "assets/img/episodes/img-05.webp", "img-06": "assets/img/episodes/img-06.webp", "img-07": "assets/img/episodes/img-07.webp", "img-08": "assets/img/episodes/img-08.webp", "img-09": "assets/img/episodes/img-09.webp", "img-10": "assets/img/episodes/img-10.webp", "img-11": "assets/img/episodes/img-11.webp", "img-23": "assets/img/episodes/img-23.webp", "img-24": "assets/img/episodes/img-24.webp", "img-25": "assets/img/episodes/img-25.webp", "img-26": "assets/img/episodes/img-26.webp", "img-27": "assets/img/episodes/img-27.webp"};
+const __IMG__ = {"img-02": "assets/img/episodes/img-02.webp", "img-03": "assets/img/episodes/img-03.webp", "img-05": "assets/img/episodes/img-05.webp", "img-06": "assets/img/episodes/img-06.webp", "img-07": "assets/img/episodes/img-07.webp", "img-08": "assets/img/episodes/img-08.webp", "img-10": "assets/img/episodes/img-10.webp", "img-11": "assets/img/episodes/img-11.webp", "img-23": "assets/img/episodes/img-23.webp", "img-24": "assets/img/episodes/img-24.webp", "img-25": "assets/img/episodes/img-25.webp", "img-26": "assets/img/episodes/img-26.webp", "img-27": "assets/img/episodes/img-27.webp"};
 
 const EP = [
     {id:'lYV5SjlMvCI', t:"À la découverte de la cuisine juive ashkénaze", g:"Kitchen by Karine", d:"47:19", c:"Culture", n:1},
@@ -16,12 +16,10 @@ const EP = [
   {id:'8PYuccNiRTE', t:"Trouver son âme sœur, le rôle du matchmaker", g:"Chayale", img:"img-23", d:"1:04:58", c:"Société"},
   {id:'jngdl_Bdf14', t:"La flamme d'un converti au judaïsme d'origine camerounaise", g:"Eliezer", img:"img-02", d:"58:49", c:"Histoires de vie"},
   {id:'PwAIjht7_6I', t:"Juive, libre et assumée : elle raconte tout", g:"Ethel Hadjaj", img:"img-03", d:"1:01:02", c:"Histoires de vie"},
-  {id:'DXoib81f_qI', t:"La voix qui guérit l'âme", g:"Edna Elbaz", img:"img-04", d:"59:21", c:"Musique"},
   {id:'Sc_5v1NPWXI', t:"PSG et judaïsme, un parcours inattendu", g:"Fabrice Pancrate", img:"img-05", d:"1:11:18", c:"Sport"},
   {id:'7MQpDIc_YC0', t:"Le rire pour rester debout", g:"Baba Rudy", img:"img-06", d:"1:02:22", c:"Humour"},
   {id:'rcw0Z-baDhQ', t:"Du rêve américain à la réalité", g:"Junes Davis", img:"img-07", d:"55:46", c:"Histoires de vie"},
   {id:'ptH_t6eB5QE', t:"Quand la performance laisse place à l'émotion", g:"Avee", img:"img-08", d:"1:07:13", c:"Musique"},
-  {id:'y-SH18SPiwM', t:"Maman, comédienne, chroniqueuse, bref un couteau suisse", g:"Sarah Elbaz", img:"img-09", d:"1:01:29", c:"Média"},
   {id:'3Sb73DCeUtc', t:"J'ai été adopté au Sri Lanka", g:"Raju", img:"img-10", d:"42:41", c:"Histoires de vie"},
   {id:'pQoFrKBdtWg', t:"De pasteur à rabbin en Afrique", g:"Rav Eliyahou Pinhas", img:"img-11", d:"47:46", c:"Histoires de vie"}
 ];
