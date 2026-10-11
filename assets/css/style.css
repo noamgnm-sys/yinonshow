@@ -25,8 +25,8 @@ img{display:block}
 .hd-logo em{font-style:normal;color:var(--gold-dp)}
 .hd-logo img{height:62px;width:auto}
 @media(max-width:768px){.hd-logo img{height:50px}}
-.wordmark img{width:clamp(240px,36vw,540px);height:auto}
-.wordmark{background:none}
+.wordmark img{width:clamp(200px,26vw,400px);height:auto}
+.wordmark{background:none;align-self:stretch;max-width:616px;display:flex;justify-content:center}
 .uni-name .uni-logo{height:60px;width:auto}
 .ft-brand img{height:64px;width:auto}
 .ft-ymg{width:150px;height:auto;margin-top:18px}
@@ -72,17 +72,17 @@ img{display:block}
 @keyframes pl{70%{box-shadow:0 0 0 11px rgba(165,132,61,0)}100%{box-shadow:0 0 0 0 rgba(165,132,61,0)}}
 
 .hero-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
-  padding:140px 6vw 80px 4vw;max-width:780px}
+  padding:140px 5vw 80px 4vw;max-width:none}
 .wordmark{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(40px,6.1vw,92px);line-height:.94;text-transform:uppercase;letter-spacing:.5px;
   background:linear-gradient(180deg,var(--ink) 4%,#7A6230 42%,var(--gold-dp) 78%,var(--gold) 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-punch{margin-top:24px;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;
-  font-size:clamp(20px,2.3vw,30px);line-height:1.28;color:var(--ink);max-width:22ch}
-.hero-line{margin-top:16px;font-size:15px;line-height:1.75;color:var(--ink70);max-width:46ch}
+  font-size:clamp(20px,2.3vw,30px);line-height:1.28;color:var(--ink);max-width:28ch}
+.hero-line{margin-top:16px;font-size:15px;line-height:1.75;color:var(--ink70);max-width:60ch}
 .hero-actions{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px}
-.ha-path{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.ha-path{display:flex;flex-direction:column;align-items:center;gap:7px}
 .ha-label{font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--ink30)}
-.hero-stats{display:flex;gap:40px;margin-top:44px;flex-wrap:wrap;width:100%;max-width:560px}
+.hero-stats{display:flex;gap:40px;margin-top:44px;flex-wrap:wrap;width:100%;max-width:640px}
 .hs-n{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(25px,2.2vw,32px);color:var(--gold-dp);line-height:1}
 .hs-l{font-size:9.5px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;color:var(--ink30);margin-top:7px}
 .hs-meta{font-size:8.5px;font-weight:600;letter-spacing:.6px;color:var(--ink20,rgba(24,19,7,.2));margin-top:4px}
@@ -94,6 +94,7 @@ img{display:block}
   .hero-media::after{background:linear-gradient(0deg,var(--cream) 0%,rgba(255,255,255,.3) 22%,transparent 55%)}
   .hero-in{padding:34px 20px 64px;align-items:center;text-align:center;max-width:none}
   .hero-punch,.hero-line{max-width:38ch}
+  .wordmark{margin:0 auto}
   .hero-actions{justify-content:center;width:100%}
   .ha-path{align-items:center;width:100%}
   .ha-path .btn{width:100%}
