@@ -30,7 +30,7 @@
   setTimeout(show, 2500);
 
   if (close) close.addEventListener('click', function(){ hide(7); });
-  if (form)  form.addEventListener('submit', function(){ hide(365); });
+  if (form)  form.addEventListener('nl:ok', function(){ setTimeout(function(){ hide(365); }, 3000); });
 
   overlay.addEventListener('click', function(e){
     if (e.target !== overlay) return;
@@ -38,5 +38,27 @@
   });
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape' && overlay.classList.contains('nl-show')) hide(0);
+  });
+})();
+
+/* ---------- INSCRIPTION NEWSLETTER (Brevo) ---------- */
+(function(){
+  document.querySelectorAll('.nl-form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button[type=submit]');
+      var legal = form.querySelector('.nl-legal');
+      if (btn) { btn.disabled = true; btn.textContent = 'Envoi…'; }
+      fetch(form.action + '?isAjax=1', { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+        .then(function(){
+          var row = form.querySelector('.nl-row');
+          if (row) row.outerHTML = '<p class="nl-msg">Merci ! Vérifie ta boîte mail pour confirmer ton inscription.</p>';
+          form.dispatchEvent(new Event('nl:ok'));
+        })
+        .catch(function(){
+          if (btn) { btn.disabled = false; btn.innerHTML = 'S&rsquo;inscrire'; }
+          if (legal) legal.textContent = 'Oups, l’inscription n’a pas pu être envoyée. Réessaie dans un instant.';
+        });
+    });
   });
 })();

@@ -401,3 +401,8 @@ textarea.inp{resize:vertical;min-height:130px}
   .hero{padding-top:78px}
   .hero-media img{object-position:center 18%}
 }
+
+/* ---------- Newsletter (Brevo) ---------- */
+.nl-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.nl-msg{font-weight:700;font-size:15px;line-height:1.5;color:var(--gold-dp);padding:14px 0}
+.on-dark .nl-msg,#newsletter .nl-msg{color:var(--gold-lt)}
