@@ -1,8 +1,10 @@
 const __IMG__ = {"img-02": "assets/img/episodes/img-02.webp", "img-03": "assets/img/episodes/img-03.webp", "img-05": "assets/img/episodes/img-05.webp", "img-06": "assets/img/episodes/img-06.webp", "img-07": "assets/img/episodes/img-07.webp", "img-08": "assets/img/episodes/img-08.webp", "img-10": "assets/img/episodes/img-10.webp", "img-11": "assets/img/episodes/img-11.webp", "img-23": "assets/img/episodes/img-23.webp", "img-24": "assets/img/episodes/img-24.webp", "img-25": "assets/img/episodes/img-25.webp", "img-26": "assets/img/episodes/img-26.webp", "img-27": "assets/img/episodes/img-27.webp"};
 
 const EP = [
-    {id:'lYV5SjlMvCI', t:"À la découverte de la cuisine juive ashkénaze", g:"Kitchen by Karine", d:"47:19", c:"Culture", n:1},
-  {id:'9cLccy1LQ0s', t:"Français, juif, patriote : le combat politique d'une nouvelle génération", g:"Simon Moos", d:"59:33", c:"Politique", n:1},
+  {id:'-TlBz8QZITk', t:"Il rassemble les religions", g:"Aaron", d:"1:00:57", c:"Société", n:1},
+  {id:'b2LQeKIPhio', t:"20 ans après « Garçon » : avec ou sans la cédille ?", g:"Koxie", d:"58:52", c:"Musique", n:1},
+  {id:'lYV5SjlMvCI', t:"À la découverte de la cuisine juive ashkénaze", g:"Kitchen by Karine", d:"47:19", c:"Culture"},
+  {id:'9cLccy1LQ0s', t:"Français, juif, patriote : le combat politique d'une nouvelle génération", g:"Simon Moos", d:"59:33", c:"Politique"},
   {id:'syOx2fPSpYQ', t:"Il ouvre des portes et rassemble des milliers de jeunes aux Seli'hot", g:"", d:"48:42", c:"Histoires de vie"},
   {id:'ZqFBlt7_MGM', t:"STAM : il a attendu 10 ans pour accomplir sa destinée", g:"", d:"49:51", c:"Histoires de vie"},
   {id:'8jihrKrIjaU', t:"Mes ancêtres sont israélites", g:"", d:"44:28", c:"Histoires de vie"},
