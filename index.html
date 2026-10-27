@@ -21,15 +21,18 @@
 <meta property="og:url" content="https://yinonshow.com/">
 <meta property="og:title" content="YINONSHOW | Le média qui donne le micro aux histoires qu'on n'entend pas">
 <meta property="og:description" content="Podcast, agence de talents et YinonShow Business. Yinon Media Group, Paris &amp; Nice.">
-<meta property="og:image" content="https://yinonshow.com/assets/og-image.jpg">
+<meta property="og:image" content="https://yinonshow.com/assets/og-image.jpg?v=2">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="YINONSHOW sur le plateau, à Paris et à Nice">
+<meta property="og:image:alt" content="Logo YINONSHOW">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="YINONSHOW | Le média qui donne le micro aux histoires qu'on n'entend pas">
 <meta name="twitter:description" content="Podcast, agence de talents et YinonShow Business. Yinon Media Group, Paris &amp; Nice.">
-<meta name="twitter:image" content="https://yinonshow.com/assets/og-image.jpg">
+<meta name="twitter:image" content="https://yinonshow.com/assets/og-image.jpg?v=2">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="image_src" href="https://yinonshow.com/assets/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +48,7 @@
    "name": "Yinon Media Group",
    "alternateName": "YINONSHOW",
    "url": "https://yinonshow.com/",
-   "logo": "https://yinonshow.com/assets/icon-512.png",
+   "logo": "https://yinonshow.com/assets/logo-yinonshow-carre.jpg",
    "image": "https://yinonshow.com/assets/og-image.jpg",
    "address": {
     "@type": "PostalAddress",
@@ -56,7 +59,9 @@
     "https://www.youtube.com/@YinonShow",
     "https://www.instagram.com/yinonofficial/",
     "https://www.instagram.com/yinonshow/",
-    "https://www.tiktok.com/@yinonshowofficial"
+    "https://www.tiktok.com/@yinonshowofficial",
+    "https://www.instagram.com/yinonmediagroup/",
+    "https://www.instagram.com/ymgtalents/"
    ],
    "contactPoint": [
     {
@@ -82,10 +87,32 @@
    }
   },
   {
+   "@type": "WebPage",
+   "@id": "https://yinonshow.com/#webpage",
+   "url": "https://yinonshow.com/",
+   "name": "YINONSHOW | Le média qui donne le micro aux histoires qu'on n'entend pas",
+   "inLanguage": "fr-FR",
+   "isPartOf": {
+    "@id": "https://yinonshow.com/#site"
+   },
+   "about": {
+    "@id": "https://yinonshow.com/#org"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://yinonshow.com/assets/og-image.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "image": "https://yinonshow.com/assets/og-image.jpg",
+   "thumbnailUrl": "https://yinonshow.com/assets/og-image.jpg"
+  },
+  {
    "@type": "PodcastSeries",
    "@id": "https://yinonshow.com/#series",
    "name": "YINONSHOW",
    "url": "https://yinonshow.com/",
+   "image": "https://yinonshow.com/assets/logo-yinonshow-carre.jpg",
    "inLanguage": "fr-FR",
    "description": "Le podcast qui donne le micro aux histoires qu'on n'entend nulle part ailleurs.",
    "publisher": {
@@ -100,11 +127,47 @@
    "@type": "ItemList",
    "@id": "https://yinonshow.com/#episodes",
    "name": "Episodes du YINONSHOW",
-   "numberOfItems": 23,
+   "numberOfItems": 25,
    "itemListElement": [
     {
      "@type": "VideoObject",
      "position": 1,
+     "name": "20 ans de business au cœur de la communauté juive",
+     "url": "https://youtu.be/a1LubEOuNug",
+     "embedUrl": "https://www.youtube.com/embed/a1LubEOuNug",
+     "thumbnailUrl": "https://i.ytimg.com/vi/a1LubEOuNug/maxresdefault.jpg",
+     "uploadDate": "2026-10-23",
+     "duration": "PT1H7M23S",
+     "genre": "Business",
+     "publisher": {
+      "@id": "https://yinonshow.com/#org"
+     },
+     "about": {
+      "@type": "Person",
+      "name": "Éric Hassoun"
+     }
+    },
+    {
+     "@type": "VideoObject",
+     "position": 2,
+     "name": "Quand la médecine devient une mission de vie",
+     "url": "https://youtu.be/XVGS3sjYEsk",
+     "embedUrl": "https://www.youtube.com/embed/XVGS3sjYEsk",
+     "thumbnailUrl": "https://i.ytimg.com/vi/XVGS3sjYEsk/maxresdefault.jpg",
+     "uploadDate": "2026-10-16",
+     "duration": "PT36M32S",
+     "genre": "Business",
+     "publisher": {
+      "@id": "https://yinonshow.com/#org"
+     },
+     "about": {
+      "@type": "Person",
+      "name": "Dr Benzaken"
+     }
+    },
+    {
+     "@type": "VideoObject",
+     "position": 3,
      "name": "Il rassemble les religions",
      "url": "https://youtu.be/-TlBz8QZITk",
      "embedUrl": "https://www.youtube.com/embed/-TlBz8QZITk",
@@ -122,7 +185,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 2,
+     "position": 4,
      "name": "20 ans après « Garçon » : avec ou sans la cédille ?",
      "url": "https://youtu.be/b2LQeKIPhio",
      "embedUrl": "https://www.youtube.com/embed/b2LQeKIPhio",
@@ -140,7 +203,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 3,
+     "position": 5,
      "name": "À la découverte de la cuisine juive ashkénaze",
      "url": "https://youtu.be/lYV5SjlMvCI",
      "embedUrl": "https://www.youtube.com/embed/lYV5SjlMvCI",
@@ -157,7 +220,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 4,
+     "position": 6,
      "name": "Français, juif, patriote : le combat politique d'une nouvelle génération",
      "url": "https://youtu.be/9cLccy1LQ0s",
      "embedUrl": "https://www.youtube.com/embed/9cLccy1LQ0s",
@@ -174,7 +237,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 5,
+     "position": 7,
      "name": "Il ouvre des portes et rassemble des milliers de jeunes aux Seli'hot",
      "url": "https://youtu.be/syOx2fPSpYQ",
      "embedUrl": "https://www.youtube.com/embed/syOx2fPSpYQ",
@@ -187,7 +250,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 6,
+     "position": 8,
      "name": "STAM : il a attendu 10 ans pour accomplir sa destinée",
      "url": "https://youtu.be/ZqFBlt7_MGM",
      "embedUrl": "https://www.youtube.com/embed/ZqFBlt7_MGM",
@@ -200,7 +263,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 7,
+     "position": 9,
      "name": "Mes ancêtres sont israélites",
      "url": "https://youtu.be/8jihrKrIjaU",
      "embedUrl": "https://www.youtube.com/embed/8jihrKrIjaU",
@@ -213,7 +276,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 8,
+     "position": 10,
      "name": "C'est pas Versailles ici : l'histoire de l'acteur derrière la pub culte",
      "url": "https://youtu.be/dyWf8knD8t0",
      "embedUrl": "https://www.youtube.com/embed/dyWf8knD8t0",
@@ -230,7 +293,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 9,
+     "position": 11,
      "name": "Combattre les antisémites sur les réseaux",
      "url": "https://youtu.be/HyM7kDg5xHc",
      "embedUrl": "https://www.youtube.com/embed/HyM7kDg5xHc",
@@ -247,7 +310,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 10,
+     "position": 12,
      "name": "Défendre Israël est ma mission",
      "url": "https://youtu.be/H8AK7dBmmxU",
      "embedUrl": "https://www.youtube.com/embed/H8AK7dBmmxU",
@@ -264,7 +327,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 11,
+     "position": 13,
      "name": "Du 6-9 NRJ à Israël : la renaissance de Geronimo",
      "url": "https://youtu.be/u_hM---aNIM",
      "embedUrl": "https://www.youtube.com/embed/u_hM---aNIM",
@@ -281,7 +344,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 12,
+     "position": 14,
      "name": "De TikTok aux élections 2027",
      "url": "https://youtu.be/BLSEm8_tyqs",
      "embedUrl": "https://www.youtube.com/embed/BLSEm8_tyqs",
@@ -298,7 +361,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 13,
+     "position": 15,
      "name": "Quand le rire devient une survie",
      "url": "https://youtu.be/o7LkT3CfnJc",
      "embedUrl": "https://www.youtube.com/embed/o7LkT3CfnJc",
@@ -315,7 +378,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 14,
+     "position": 16,
      "name": "L'Ashkénaze qui fait rire les Séfarades",
      "url": "https://youtu.be/jvzY5uIinGg",
      "embedUrl": "https://www.youtube.com/embed/jvzY5uIinGg",
@@ -332,7 +395,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 15,
+     "position": 17,
      "name": "Trouver son âme sœur, le rôle du matchmaker",
      "url": "https://youtu.be/8PYuccNiRTE",
      "embedUrl": "https://www.youtube.com/embed/8PYuccNiRTE",
@@ -349,7 +412,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 16,
+     "position": 18,
      "name": "La flamme d'un converti au judaïsme d'origine camerounaise",
      "url": "https://youtu.be/jngdl_Bdf14",
      "embedUrl": "https://www.youtube.com/embed/jngdl_Bdf14",
@@ -366,7 +429,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 17,
+     "position": 19,
      "name": "Juive, libre et assumée : elle raconte tout",
      "url": "https://youtu.be/PwAIjht7_6I",
      "embedUrl": "https://www.youtube.com/embed/PwAIjht7_6I",
@@ -383,7 +446,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 18,
+     "position": 20,
      "name": "PSG et judaïsme, un parcours inattendu",
      "url": "https://youtu.be/Sc_5v1NPWXI",
      "embedUrl": "https://www.youtube.com/embed/Sc_5v1NPWXI",
@@ -400,7 +463,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 19,
+     "position": 21,
      "name": "Le rire pour rester debout",
      "url": "https://youtu.be/7MQpDIc_YC0",
      "embedUrl": "https://www.youtube.com/embed/7MQpDIc_YC0",
@@ -417,7 +480,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 20,
+     "position": 22,
      "name": "Du rêve américain à la réalité",
      "url": "https://youtu.be/rcw0Z-baDhQ",
      "embedUrl": "https://www.youtube.com/embed/rcw0Z-baDhQ",
@@ -434,7 +497,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 21,
+     "position": 23,
      "name": "Quand la performance laisse place à l'émotion",
      "url": "https://youtu.be/ptH_t6eB5QE",
      "embedUrl": "https://www.youtube.com/embed/ptH_t6eB5QE",
@@ -451,7 +514,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 22,
+     "position": 24,
      "name": "J'ai été adopté au Sri Lanka",
      "url": "https://youtu.be/3Sb73DCeUtc",
      "embedUrl": "https://www.youtube.com/embed/3Sb73DCeUtc",
@@ -468,7 +531,7 @@
     },
     {
      "@type": "VideoObject",
-     "position": 23,
+     "position": 25,
      "name": "De pasteur à rabbin en Afrique",
      "url": "https://youtu.be/pQoFrKBdtWg",
      "embedUrl": "https://www.youtube.com/embed/pQoFrKBdtWg",
@@ -490,6 +553,11 @@
 </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ico-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.72 3.72 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38C1.35 2.68.93 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.71 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.85-10.41a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></symbol>
+  <symbol id="ico-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.44 0h-3.9v15.67a3.1 3.1 0 0 1-3.1 3.06 3.09 3.09 0 0 1-3.1-3.06 3.1 3.1 0 0 1 3-3.06V8.66a6.97 6.97 0 0 0-6.9 6.98A6.97 6.97 0 0 0 9.5 22.6a6.97 6.97 0 0 0 6.94-6.96V7.6a8.55 8.55 0 0 0 4.98 1.6V5.32a4.85 4.85 0 0 1-4.98-5.32Z"/></symbol>
+  <symbol id="ico-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></symbol>
+</svg>
 <a class="skip-link" href="#episodes">Aller au contenu</a>
 
 <header class="hd" id="hd">
@@ -570,7 +638,10 @@
         <p class="uni-for">Pour les artistes</p>
         <p class="uni-txt">L'agence. On accompagne, on structure et on met en lumière les artistes
         qui marquent la scène : image, carrière, visibilité.</p>
-        <a href="#talents" class="btn btn-o btn-sm">Découvrir les talents</a>
+        <div class="uni-btns">
+          <a href="#talents" class="btn btn-o btn-sm">Découvrir les talents</a>
+          <a href="https://www.instagram.com/ymgtalents/" target="_blank" rel="noopener" class="btn btn-o btn-sm">@ymgtalents</a>
+        </div>
       </div>
     </article>
 
@@ -632,11 +703,11 @@
 
     <h3 class="subhead rv">Ils nous font confiance <small>marques partenaires</small></h3>
     <div class="partners rv">
-      <div class="partner"><img src="assets/img/partenaires/pose-ton-empreinte.webp" alt="Pose ton empreinte" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span></div>
-      <div class="partner"><img src="assets/img/partenaires/tandem-tv.webp" alt="Tandem TV" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span></div>
-      <div class="partner"><img src="assets/img/partenaires/mon-tailleur-paris.webp" alt="Mon Tailleur Paris" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span></div>
-      <div class="partner"><img src="assets/img/partenaires/hofesh-traiteur.webp" alt="Hofesh Traiteur" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span></div>
-      <div class="partner"><span class="partner-n">7/9 Comedy Room</span><span class="partner-t">Salle de spectacle &amp; d'entraînement</span></div>
+      <a class="partner" href="https://www.instagram.com/pose_ton_empreinte/" target="_blank" rel="noopener" aria-label="Pose ton empreinte sur Instagram"><img src="assets/img/partenaires/pose-ton-empreinte.webp" alt="Pose ton empreinte" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span><span class="partner-ig">@pose_ton_empreinte</span></a>
+      <a class="partner" href="https://www.instagram.com/tandem_tv_2/" target="_blank" rel="noopener" aria-label="Tandem TV sur Instagram"><img src="assets/img/partenaires/tandem-tv.webp" alt="Tandem TV" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span><span class="partner-ig">@tandem_tv_2</span></a>
+      <a class="partner" href="https://www.instagram.com/mon_tailleur_paris/" target="_blank" rel="noopener" aria-label="Mon Tailleur Paris sur Instagram"><img src="assets/img/partenaires/mon-tailleur-paris.webp" alt="Mon Tailleur Paris" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span><span class="partner-ig">@mon_tailleur_paris</span></a>
+      <a class="partner" href="https://www.instagram.com/hofesh_traiteur/" target="_blank" rel="noopener" aria-label="Hofesh Traiteur sur Instagram"><img src="assets/img/partenaires/hofesh-traiteur.webp" alt="Hofesh Traiteur" class="partner-logo" loading="lazy"><span class="partner-t">Partenaire</span><span class="partner-ig">@hofesh_traiteur</span></a>
+      <a class="partner" href="https://www.instagram.com/septneufcomedyroom/" target="_blank" rel="noopener" aria-label="7/9 Comedy Room sur Instagram"><span class="partner-n">7/9 Comedy Room</span><span class="partner-t">Salle de spectacle &amp; d'entraînement</span><span class="partner-ig">@septneufcomedyroom</span></a>
     </div>
     <p class="partners-note rv">Le détail de chaque collaboration est disponible sur demande : <a href="mailto:business@yinonshow.com" style="color:var(--gold-dp);font-weight:700">business@yinonshow.com</a></p>
 
@@ -696,7 +767,7 @@
   <div class="tal">
 
     <article class="tal-c rv">
-      <div class="tal-ph"><img src="assets/img/talents/yinon.webp" alt="Yinon" loading="lazy"></div>
+      <a class="tal-ph" href="https://www.instagram.com/yinonofficial/" target="_blank" rel="noopener" aria-label="Yinon sur Instagram"><img src="assets/img/talents/yinon.webp" alt="Yinon" loading="lazy"><span class="tal-ig"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#ico-ig"/></svg>@yinonofficial</span></a>
       <div class="tal-b">
         <h3 class="tal-n">Yinon</h3>
         <p class="tal-r">Fondateur · Présentateur · Producteur</p>
@@ -708,7 +779,7 @@
     </article>
 
     <article class="tal-c rv">
-      <div class="tal-ph"><img src="assets/img/talents/sarah-elbaz.webp" alt="Sarah Elbaz" loading="lazy"></div>
+      <a class="tal-ph" href="https://www.instagram.com/sarahelbz/" target="_blank" rel="noopener" aria-label="Sarah Elbaz sur Instagram"><img src="assets/img/talents/sarah-elbaz.webp" alt="Sarah Elbaz" loading="lazy"><span class="tal-ig"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#ico-ig"/></svg>@sarahelbz</span></a>
       <div class="tal-b">
         <h3 class="tal-n">Sarah Elbaz</h3>
         <p class="tal-r">Comédienne · Chroniqueuse Radio J</p>
@@ -720,7 +791,7 @@
     </article>
 
     <article class="tal-c rv">
-      <div class="tal-ph"><img src="assets/img/talents/fonzie.webp" alt="Fonzie" loading="lazy"></div>
+      <a class="tal-ph" href="https://www.instagram.com/fonzie_kohane/" target="_blank" rel="noopener" aria-label="Fonzie sur Instagram"><img src="assets/img/talents/fonzie.webp" alt="Fonzie" loading="lazy"><span class="tal-ig"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#ico-ig"/></svg>@fonzie_kohane</span></a>
       <div class="tal-b">
         <h3 class="tal-n">Fonzie</h3>
         <p class="tal-r">Chanteur · Danseur · Comédien · Showman</p>
@@ -732,7 +803,7 @@
     </article>
 
     <article class="tal-c rv">
-      <div class="tal-ph"><img src="assets/img/talents/noam-abiton.webp" alt="Noam Abiton" loading="lazy"></div>
+      <a class="tal-ph" href="https://www.instagram.com/abiton.noam/" target="_blank" rel="noopener" aria-label="Noam Abiton sur Instagram"><img src="assets/img/talents/noam-abiton.webp" alt="Noam Abiton" loading="lazy"><span class="tal-ig"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#ico-ig"/></svg>@abiton.noam</span></a>
       <div class="tal-b">
         <h3 class="tal-n">Noam Abiton</h3>
         <p class="tal-r">Talent YMG</p>
@@ -742,7 +813,7 @@
     </article>
 
     <article class="tal-c rv">
-      <div class="tal-ph"><img src="assets/img/talents/sagi-getter.webp" alt="Sagi Getter" loading="lazy" style="object-position:center 75%"></div>
+      <a class="tal-ph" href="https://www.instagram.com/sagigetter/" target="_blank" rel="noopener" aria-label="Sagi Getter sur Instagram"><img src="assets/img/talents/sagi-getter.webp" alt="Sagi Getter" loading="lazy" style="object-position:center 75%"><span class="tal-ig"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#ico-ig"/></svg>@sagigetter</span></a>
       <div class="tal-b">
         <h3 class="tal-n">Sagi Getter</h3>
         <p class="tal-r">Talent YMG</p>
@@ -753,7 +824,8 @@
 
   </div>
 
-  <div style="text-align:center;margin-top:44px">
+  <div class="tal-cta">
+    <a href="https://www.instagram.com/ymgtalents/" target="_blank" rel="noopener" class="btn btn-g">Suivre YMG Talents sur Instagram</a>
     <a href="mailto:contact@yinonshow.com?subject=YMG%20Talents%20-%20Rejoindre%20l'agence" class="btn btn-o">Rejoindre l'agence</a>
   </div>
 </section>
@@ -1002,26 +1074,27 @@
   </div>
 </section>
 
-<section class="sec">
+<section class="sec" id="reseaux">
   <div class="head ctr rv">
-    <h2 class="ttl">Suis-nous sur les réseaux</h2>
+    <h2 class="ttl">Suis-nous sur les réseaux sociaux</h2>
   </div>
   <div class="igb on-dark rv">
     <p class="ig-txt">Coulisses du plateau, extraits d'épisodes, annonces d'invités :
-    tout se passe d'abord sur nos réseaux.</p>
+    tout se passe d'abord sur nos réseaux sociaux.</p>
     <div class="ig-brands">
       <div class="ig-brand">
-        <img class="ig-logo" src="assets/img/logo-yinonshow.png" alt="YinonShow" loading="lazy">
+        <div class="ig-logo-w"><img class="ig-logo" src="assets/img/logo-yinonshow.png" alt="YinonShow" loading="lazy"></div>
         <div class="ig-socials">
-          <a href="https://www.instagram.com/yinonshow/" target="_blank" rel="noopener" class="btn btn-g">Instagram</a>
-          <a href="https://www.tiktok.com/@yinonshowofficial" target="_blank" rel="noopener" class="btn btn-o">TikTok</a>
-          <a href="https://www.youtube.com/@YinonShow" target="_blank" rel="noopener" class="btn btn-o">YouTube</a>
+          <a href="https://www.instagram.com/yinonshow/" target="_blank" rel="noopener" class="soc"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><use href="#ico-ig"/></svg><span>Instagram</span></a>
+          <a href="https://www.tiktok.com/@yinonshowofficial" target="_blank" rel="noopener" class="soc"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><use href="#ico-tt"/></svg><span>TikTok</span></a>
+          <a href="https://www.youtube.com/@YinonShow" target="_blank" rel="noopener" class="soc"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><use href="#ico-yt"/></svg><span>YouTube</span></a>
         </div>
       </div>
       <div class="ig-brand">
-        <img class="ig-logo ig-logo-ymg" src="assets/img/logo-une-production-ymg.png" alt="Yinon Media Group" loading="lazy">
-        <div class="ig-socials">
-          <a href="https://www.instagram.com/yinonmediagroup/" target="_blank" rel="noopener" class="btn btn-g">Instagram</a>
+        <div class="ig-logo-w"><img class="ig-logo ig-logo-ymg" src="assets/img/logo-une-production-ymg.png" alt="Yinon Media Group" loading="lazy"></div>
+        <div class="ig-socials ig-socials-2">
+          <a href="https://www.instagram.com/yinonmediagroup/" target="_blank" rel="noopener" class="soc"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><use href="#ico-ig"/></svg><span>Yinon Media Group</span></a>
+          <a href="https://www.instagram.com/ymgtalents/" target="_blank" rel="noopener" class="soc"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><use href="#ico-ig"/></svg><span>YMG Talents</span></a>
         </div>
       </div>
     </div>
@@ -1056,9 +1129,13 @@
       <p class="sub">Partenariat, booking d'un talent, reportage, ou l'envie de venir témoigner sur le plateau.</p>
     </div>
     <div class="cw rv">
-      <form class="frm" action="https://formsubmit.co/contact@yinonshow.com" method="POST">
+      <!-- Formulaire de contact : envoi direct par e-mail, sans redirection.
+           Pour passer sur Web3Forms (aucune activation), coller la clé reçue par mail dans data-web3forms-key. -->
+      <form class="frm" id="contactForm" action="https://formsubmit.co/contact@yinonshow.com" method="POST" data-web3forms-key="">
         <input type="hidden" name="_subject" value="Contact depuis le site YinonShow">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" class="frm-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="frm-row">
           <input type="text" name="name" class="inp" placeholder="Votre nom" required>
           <input type="email" name="email" class="inp" placeholder="Email" required>
@@ -1074,6 +1151,7 @@
         </select>
         <textarea name="message" class="inp" placeholder="Votre message" rows="5" required></textarea>
         <button type="submit" class="btn btn-g">Envoyer le message</button>
+        <p class="frm-status" id="contactStatus" role="status" aria-live="polite"></p>
         <p class="frm-legal">Vos données servent uniquement à vous répondre. <a href="confidentialite.html">En savoir plus et exercer vos droits</a>.</p>
       </form>
       <p style="text-align:center;margin-top:18px;font-size:13.5px;color:var(--ink30)">
@@ -1101,6 +1179,7 @@
       <a href="https://www.youtube.com/@YinonShow" target="_blank" rel="noopener">YouTube</a>
       <a href="https://www.instagram.com/yinonshow/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@yinonshowofficial" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/ymgtalents/" target="_blank" rel="noopener">YMG Talents</a>
     </div>
     <div class="ft-c">
       <h5>Contact</h5>
@@ -1136,7 +1215,14 @@
   </div>
 </div>
 
+<button class="music-btn" id="musicBtn" type="button" aria-pressed="false" hidden>
+  <span class="music-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span class="music-lbl">Écouter le générique</span>
+</button>
+
 <script src="assets/js/studios.js"></script>
 <script src="assets/js/newsletter.js"></script>
+<script src="assets/js/contact.js"></script>
+<script src="assets/js/music.js"></script>
 </body>
 </html>
