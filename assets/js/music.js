@@ -2,9 +2,9 @@
    Les navigateurs interdisent le son automatique à l'ouverture d'une page.
    La musique démarre donc au premier clic / toucher du visiteur, à volume doux,
    en boucle. Le bouton en bas à gauche permet de couper ou relancer.
-   Fichier attendu : assets/audio/generique.mp3                              */
+   Fichier : assets/generique.mp3                              */
 (function(){
-  var SRC = 'assets/audio/generique.mp3';
+  var SRC = 'assets/generique.mp3';
   var VOL = 0.25;
   var KEY = 'ys_music_off';
   var btn = document.getElementById('musicBtn');
