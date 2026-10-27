@@ -52,7 +52,7 @@
       fetch(form.action + '?isAjax=1', { method: 'POST', body: new FormData(form), mode: 'no-cors' })
         .then(function(){
           var row = form.querySelector('.nl-row');
-          if (row) row.outerHTML = '<p class="nl-msg">Merci ! Vérifie ta boîte mail pour confirmer ton inscription.</p>';
+          if (row) row.outerHTML = '<p class="nl-msg">Merci ! Tu es bien inscrit à la newsletter.</p>';
           form.dispatchEvent(new Event('nl:ok'));
         })
         .catch(function(){
