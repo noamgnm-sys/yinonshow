@@ -503,3 +503,23 @@ a.tal-ph:hover .tal-ig{background:var(--gold-dp)}
 @keyframes eq{0%,100%{height:4px}50%{height:14px}}
 @media(prefers-reduced-motion:reduce){.music-btn.on .music-eq i{animation:none;height:10px}}
 @media(max-width:640px){.music-btn{left:14px;bottom:14px;padding:13px}.music-lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+
+/* Spectacle */
+.spec{display:grid;grid-template-columns:minmax(260px,420px) 1fr;background:var(--ink);color:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--ink)}
+.spec-ph{position:relative;min-height:100%}
+.spec-ph img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.spec-badge{position:absolute;top:18px;left:18px;background:var(--gold);color:#17130A;font-weight:800;font-size:18px;padding:8px 14px;border-radius:999px}
+.spec-b{padding:44px 46px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.spec-k{font-size:12.5px;font-weight:700;letter-spacing:.2px;color:var(--gold-lt);text-transform:uppercase}
+.spec-t{font-family:'Playfair Display',serif;font-weight:900;font-size:44px;line-height:1.05}
+.spec-d{color:var(--w80);font-size:16px;line-height:1.6;max-width:560px}
+.spec-i{list-style:none;padding:0;margin:4px 0;display:grid;gap:8px;color:var(--w80);font-size:15px}
+.spec-i span{display:inline-block;min-width:64px;color:var(--gold-lt);font-weight:700;margin-right:8px}
+.spec-p{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:6px 0 4px}
+.spec-p strong{font-family:'Playfair Display',serif;font-size:40px;color:var(--gold)}
+.spec-p s{color:var(--w55);font-size:18px}
+.spec-p em{font-style:normal;color:var(--w55);font-size:13px}
+.spec .btn-g{background:var(--gold);color:#17130A}
+.spec .btn-g:hover{background:var(--gold-lt)}
+.spec-n{color:var(--w32);font-size:12px}
+@media(max-width:860px){.spec{grid-template-columns:1fr}.spec-ph{height:340px}.spec-b{padding:30px 24px}.spec-t{font-size:34px}}
